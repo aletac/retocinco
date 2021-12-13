@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Alejandro Tacue
  */
 @RestController
-@RequestMapping("/api/hairproduct")
+@RequestMapping("/api/hairproducts")
 @CrossOrigin("*")
 public class HairProductsController {
 
