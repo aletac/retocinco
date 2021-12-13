@@ -8,7 +8,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * Modela una coleccion de usuarios
+ * Modela una coleccion de usuarios, para anticiparnos a los retos que se avecinan se agregaròn los campos birthtDay y monthBirthtDay, que
+ * corresponden a la fecha de cumpleaños y mes de cumpleaños del usuario respectivamente
  * @author Alejandro Tacue
  */
 
@@ -21,6 +22,8 @@ public class User {
     private Integer id;
     private String identification;
     private String name;
+    private Date birthtDay;
+    private String monthBirthtDay;
     private String address;
     private String cellPhone;
     private String email;
