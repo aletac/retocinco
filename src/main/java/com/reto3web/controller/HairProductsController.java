@@ -1,7 +1,8 @@
 package com.reto3web.controller;
 
-import com.reto3web.model.Accessory;
-import com.reto3web.service.AccessoryService;
+
+import com.reto3web.model.HairProducts;
+import com.reto3web.service.HairProductsService;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,38 +24,38 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Alejandro Tacue
  */
 @RestController
-@RequestMapping("/api/accessory")
+@RequestMapping("/api/hairproduct")
 @CrossOrigin("*")
-public class AccessoryController {
+public class HairProductsController {
 
     @Autowired
-    private AccessoryService accessoryService;
+    private HairProductsService hairProductsService;
 
     @GetMapping("/all")
-    public List<Accessory> getAll() {
-        return accessoryService.getAll();
+    public List<HairProducts> getAll() {
+        return hairProductsService.getAll();
     }
 
     @GetMapping("/{reference}")
-    public Optional<Accessory> getAccesory(@PathVariable("reference") String reference) {
-        return accessoryService.getAccesory(reference);
+    public Optional<HairProducts> getHairProducts(@PathVariable("reference") String reference) {
+        return hairProductsService.getHairProducts(reference);
     }
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
-    public Accessory create(@RequestBody Accessory gadget) {
-        return accessoryService.create(gadget);
+    public HairProducts create(@RequestBody HairProducts gadget) {
+        return hairProductsService.create(gadget);
     }
 
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Accessory update(@RequestBody Accessory gadget) {
-        return accessoryService.update(gadget);
+    public HairProducts update(@RequestBody HairProducts gadget) {
+        return hairProductsService.update(gadget);
     }
 
     @DeleteMapping("/{reference}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("reference") String reference) {
-        return accessoryService.delete(reference);
+        return hairProductsService.delete(reference);
     }
 }

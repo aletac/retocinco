@@ -1,5 +1,5 @@
 package com.reto3web;
-import com.reto3web.repository.crud.AccesoryCrudRepository;
+import com.reto3web.repository.crud.HairProductsCrudRepository;
 import com.reto3web.repository.crud.OrderCrudRepository;
 import com.reto3web.repository.crud.UserCrudRepository;
 import java.text.SimpleDateFormat;
@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication implements CommandLineRunner {
 
     @Autowired
-    private AccesoryCrudRepository crudRepository;
+    private HairProductsCrudRepository crudRepository;
     @Autowired
     private UserCrudRepository userCrudRepository;
     @Autowired
