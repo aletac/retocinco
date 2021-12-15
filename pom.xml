@@ -8,11 +8,11 @@
 		<version>2.6.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>retotres</groupId>
-	<artifactId>retotres</artifactId>
+	<groupId>retocuatro</groupId>
+	<artifactId>retocuatro</artifactId>
 	<version>0.0.1</version>
-	<name>reto3web</name>
-	<description>Reto 3</description>
+	<name>reto4web</name>
+	<description>Reto 4 web</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

@@ -1,7 +1,7 @@
-package com.reto3web.service;
+package com.reto4web.service;
 
-import com.reto3web.model.HairProducts;
-import com.reto3web.repository.HairProductsRepository;
+import com.reto4web.model.HairProducts;
+import com.reto4web.repository.HairProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

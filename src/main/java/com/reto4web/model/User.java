@@ -1,4 +1,4 @@
-package com.reto3web.model;
+package com.reto4web.model;
 
 import java.util.Date;
 import lombok.AllArgsConstructor;

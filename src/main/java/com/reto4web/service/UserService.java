@@ -1,7 +1,7 @@
-package com.reto3web.service;
+package com.reto4web.service;
 
-import com.reto3web.model.User;
-import com.reto3web.repository.UserRepository;
+import com.reto4web.model.User;
+import com.reto4web.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,19 +14,35 @@ import java.util.Optional;
  */
 @Service
 public class UserService {
-
+    /**
+     * se instancia UserRepository como userRepository
+     */
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     *
+     * @return lista de usuarios
+     */
     public List<User> getAll() {
         return userRepository.getAll();
     }
 
+    /**
+     *
+     * @param id
+     * @return usuario por id
+     */
     public Optional<User> getUser(int id) {
         
         return userRepository.getUser(id);
     }
 
+    /**
+     *
+     * @param user
+     * @return id maximo
+     */
     public User create(User user) {
         
         //obtiene el maximo id existente en la coleccion
@@ -41,7 +57,10 @@ public class UserService {
             else
                 user.setId(userIdMaximo.get().getId() + 1);
         }
-        
+        /**
+         * optional para comprobar si el usuario existe
+         * guarda usuario y si no, devuelve los datos ingresados
+         */
         Optional<User> e = userRepository.getUser(user.getId());
         if (e.isEmpty()) {
             if (emailExists(user.getEmail())==false){
@@ -55,6 +74,11 @@ public class UserService {
         
     }
 
+    /**
+     *
+     * @param user
+     * @return actualiza el usuario o retorna los datos ingresados
+     */
     public User update(User user) {
 
         if (user.getId() != null) {
@@ -91,7 +115,12 @@ public class UserService {
             return user;
         }
     }
-    
+
+    /**
+     *
+     * @param userId
+     * @return booleano y si es True elimina usuario por id
+     */
     public boolean delete(int userId) {
         Boolean aBoolean = getUser(userId).map(user -> {
             userRepository.delete(user);
@@ -99,11 +128,22 @@ public class UserService {
         }).orElse(false);
         return aBoolean;
     }
-    
+
+    /**
+     *
+     * @param email
+     * @return booleano de validación de existencia de usuario
+     */
     public boolean emailExists(String email) {
         return userRepository.emailExists(email);
     }
 
+    /**
+     *
+     * @param email
+     * @param password
+     * @return usuario autenticado
+     */
     public User authenticateUser(String email, String password) {
         Optional<User> usuario = userRepository.authenticateUser(email, password);
 

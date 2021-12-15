@@ -1,4 +1,4 @@
-package com.reto3web.model;
+package com.reto4web.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Esta clase define la entidad Hair Products
+ * @author Alejandro Tacue
  */
 @Data
 @NoArgsConstructor

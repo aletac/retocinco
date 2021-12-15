@@ -1,7 +1,7 @@
-package com.reto3web.repository;
+package com.reto4web.repository;
 
-import com.reto3web.model.User;
-import com.reto3web.repository.crud.UserCrudRepository;
+import com.reto4web.model.User;
+import com.reto4web.repository.crud.UserCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import java.util.List;

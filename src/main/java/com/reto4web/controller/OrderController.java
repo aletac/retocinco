@@ -1,7 +1,7 @@
-package com.reto3web.controller;
+package com.reto4web.controller;
 
-import com.reto3web.model.Order;
-import com.reto3web.service.OrderService;
+import com.reto4web.model.Order;
+import com.reto4web.service.OrderService;
 import java.util.List;
 import java.util.Optional;
 
@@ -63,5 +63,22 @@ public class OrderController {
     public List<Order> findByZone(@PathVariable("zona") String zona) {
         return orderService.findByZone(zona);
     }
+    //Métodos del reto 4
+    //Reto 4: Ordenes de un asesor
+    @GetMapping("/salesman/{id}")
+    public List<Order> ordersSalesManByID(@PathVariable("id") Integer id){
+        return orderService.ordersSalesManByID(id);
+    }
 
+    //Reto 4: Ordenes de un asesor x Estado
+    @GetMapping("/state/{state}/{id}")
+    public List<Order> ordersSalesManByState(@PathVariable("state") String state, @PathVariable("id") Integer id){
+        return orderService.ordersSalesManByState(state, id);
+    }
+
+    //Reto 4: Ordenes de un asesor x fecha
+    @GetMapping("/date/{date}/{id}")
+    public List<Order> ordersSalesManByDate(@PathVariable("date") String dateStr, @PathVariable("id") Integer id) {
+        return orderService.ordersSalesManByDate(dateStr,id);
+    }
 }

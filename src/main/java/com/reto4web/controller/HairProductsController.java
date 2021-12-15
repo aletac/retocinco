@@ -1,8 +1,8 @@
-package com.reto3web.controller;
+package com.reto4web.controller;
 
 
-import com.reto3web.model.HairProducts;
-import com.reto3web.service.HairProductsService;
+import com.reto4web.model.HairProducts;
+import com.reto4web.service.HairProductsService;
 import java.util.List;
 import java.util.Optional;
 

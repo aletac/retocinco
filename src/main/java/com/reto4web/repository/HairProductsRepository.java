@@ -1,11 +1,10 @@
-package com.reto3web.repository;
+package com.reto4web.repository;
 
-import com.reto3web.model.HairProducts;
+import com.reto4web.model.HairProducts;
 import java.util.List;
 import java.util.Optional;
 
-import com.reto3web.model.HairProducts;
-import com.reto3web.repository.crud.HairProductsCrudRepository;
+import com.reto4web.repository.crud.HairProductsCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
